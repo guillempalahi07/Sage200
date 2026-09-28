@@ -11,7 +11,10 @@
 <!-- NAVBAR -->
 <nav class="navbar">
   <div class="logo">Sage<span>200</span></div>
-  <ul class="nav-links">
+  <button class="nav-toggle" id="navToggle" aria-label="Obrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
     <li><a href="#intro">Introducció</a></li>
     <li><a href="#info">Informació general</a></li>
     <li><a href="#llicencies">Llicències</a></li>
@@ -24,17 +27,19 @@
     <li><a href="#conclusio">Conclusió</a></li>
   </ul>
 </nav>
+<div class="progress-bar" id="progressBar"></div>
 
 <!-- HERO -->
 <header class="hero" id="top">
-  <!-- Aquí logo de Sage 200 -->
+  <div class="hero-logo">S200</div>
   <h1>Sage 200</h1>
   <p class="subtitle">Estudi de mercat d'un SGE</p>
   <p class="autors">Autors: Nom Cognom 1 · Nom Cognom 2</p>
+  <a href="#intro" class="hero-cta">Descobreix l'estudi ↓</a>
 </header>
 
 <!-- 1. INTRODUCCIÓ -->
-<section id="intro" class="section">
+<section id="intro" class="section reveal">
   <h2>1. Introducció</h2>
   <div class="content-box">
     <p>Un <strong>Sistema de Gestió Empresarial (SGE)</strong> és una aplicació informàtica que permet planificar, organitzar i controlar de manera integrada els processos i recursos d'una empresa (finances, vendes, compres, magatzem, RRHH...).</p>
@@ -58,7 +63,7 @@
 </section>
 
 <!-- 2. INFORMACIÓ GENERAL -->
-<section id="info" class="section alt-bg">
+<section id="info" class="section alt-bg reveal">
   <h2>2. Informació general del sistema</h2>
   <div class="content-box">
     <p><strong>Desenvolupador:</strong> Sage Group plc.</p>
@@ -90,7 +95,7 @@
 </section>
 
 <!-- 3. LLICÈNCIES I PREUS -->
-<section id="llicencies" class="section">
+<section id="llicencies" class="section reveal">
   <h2>3. Tipus de llicències i preus</h2>
   <div class="content-box">
     <table>
@@ -119,7 +124,7 @@
 </section>
 
 <!-- 4. SGBD -->
-<section id="sgbd" class="section alt-bg">
+<section id="sgbd" class="section alt-bg reveal">
   <h2>4. Sistemes gestors de bases de dades</h2>
   <div class="content-box">
     <p><strong>SGBD utilitzat:</strong> Microsoft SQL Server</p>
@@ -129,7 +134,7 @@
 </section>
 
 <!-- 5. INSTAL·LACIÓ I ACCÉS -->
-<section id="instalacio" class="section">
+<section id="instalacio" class="section reveal">
   <h2>5. Instal·lació i accés al sistema</h2>
   <div class="content-box">
     <div class="access-grid">
@@ -158,7 +163,7 @@
 </section>
 
 <!-- 6. MÒDULS -->
-<section id="moduls" class="section alt-bg">
+<section id="moduls" class="section alt-bg reveal">
   <h2>6. Mòduls i funcionalitats</h2>
   <div class="content-box">
     <div class="module-grid">
@@ -197,7 +202,7 @@
 </section>
 
 <!-- 7. COMPARATIVA -->
-<section id="competidors" class="section">
+<section id="competidors" class="section reveal">
   <h2>7. Comparativa amb competidors</h2>
   <div class="content-box">
     <table>
@@ -234,7 +239,7 @@
 </section>
 
 <!-- 8. MERCAT LABORAL -->
-<section id="mercat" class="section alt-bg">
+<section id="mercat" class="section alt-bg reveal">
   <h2>8. Mercat laboral</h2>
   <div class="content-box">
     <p>Ofertes de feina actives relacionades amb Sage 200 (font: InfoJobs):</p>
@@ -246,7 +251,7 @@
 </section>
 
 <!-- 9. AVANTATGES I INCONVENIENTS -->
-<section id="avantatges" class="section">
+<section id="avantatges" class="section reveal">
   <h2>9. Avantatges i inconvenients</h2>
   <div class="content-box pros-cons">
     <div class="pros">
@@ -269,7 +274,7 @@
 </section>
 
 <!-- 10. CONCLUSIÓ -->
-<section id="conclusio" class="section alt-bg">
+<section id="conclusio" class="section alt-bg reveal">
   <h2>10. Conclusió</h2>
   <div class="content-box">
     <p><!-- Afegir aquí la valoració final del grup sobre Sage 200 --></p>
@@ -280,7 +285,11 @@
 <footer class="footer">
   <p>Fonts: web oficial de Sage, InfoJobs, documentació tècnica</p>
   <p>Autors: Nom Cognom 1 · Nom Cognom 2 — 2n DAM</p>
+  <p class="visits">Visites a la pàgina: <span id="visitCount">–</span></p>
 </footer>
 
+<button id="backToTop" class="back-to-top" aria-label="Tornar amunt">↑</button>
+
+<script src="script.js"></script>
 </body>
 </html>
